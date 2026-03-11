@@ -8,7 +8,7 @@ Content-Type: application/json
 }
 
 ### Post service
-POST http://localhost:8899/api/post 
+POST http://localhost:8066/api/post 
 
 ###test not found
 POST http://localhost:8899/api/product
