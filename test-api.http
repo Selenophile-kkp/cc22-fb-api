@@ -22,9 +22,8 @@ POST http://localhost:8066/api/auth/register HTTP/1.1
 content-type: application/json
 
 {
-#  "identity" : "andy@ggg.mail",
- "identity" : "3333333333",
-#  "identity" : "someone@ggg.mail",
+#  "identity" : "123456789",
+ "identity" : "someone@ggg.mail",
  "firstName" : "someone",
  "lastName" : "codecamp",
  "password" : "123456",
