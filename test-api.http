@@ -1,0 +1,38 @@
+# Login
+POST http://localhost:8066/api/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "identity" : "andy@ggg.mail",
+    "password" : "a123456"
+}
+
+
+### Post service
+POST http://localhost:8066/api/post 
+
+###test not found
+GET http://localhost:8066/api/product
+
+###
+GET  http://localhost:8066/api/auth/me
+
+### Register api
+POST http://localhost:8066/api/auth/register HTTP/1.1
+content-type: application/json
+
+{
+#  "identity" : "andy@ggg.mail",
+ "identity" : "3333333333",
+#  "identity" : "someone@ggg.mail",
+ "firstName" : "someone",
+ "lastName" : "codecamp",
+ "password" : "123456",
+ "confirmPassword" : "123456"
+}
+###
+
+
+
+
+
