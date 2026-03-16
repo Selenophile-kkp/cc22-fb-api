@@ -2,7 +2,7 @@
 
 ### env guide
 
-PORT=8899  
+PORT=8066  
 DATABASE_URL=  
 JWT_SECRET=
 
