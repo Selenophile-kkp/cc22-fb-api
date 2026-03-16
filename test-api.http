@@ -1,21 +1,17 @@
-# Login
+### Get Me
+GET http://localhost:8066/api/auth/me HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzczMzcxNDg5LCJleHAiOjE3NzUwMTMwODl9.JybwOzPlfJYdF1G-Q9x0TxSp2ZlUVL7jQjd8Zg3s3pw
+
+
+
+### Login
 POST http://localhost:8066/api/auth/login HTTP/1.1
 Content-Type: application/json
 
 {
     "identity" : "andy@ggg.mail",
-    "password" : "a123456"
+    "password" : "123456"
 }
-
-
-### Post service
-POST http://localhost:8066/api/post 
-
-###test not found
-GET http://localhost:8066/api/product
-
-###
-GET  http://localhost:8066/api/auth/me
 
 ### Register api
 POST http://localhost:8066/api/auth/register HTTP/1.1
@@ -29,7 +25,19 @@ content-type: application/json
  "password" : "123456",
  "confirmPassword" : "123456"
 }
+
+
+
+### Post service
+POST http://localhost:8066/api/post 
+
+###test not found
+GET http://localhost:8066/api/product
+
 ###
+GET  http://localhost:8066/api/auth/me
+
+
 
 
 

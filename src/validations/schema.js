@@ -24,13 +24,24 @@ export const registerSchema = z
     message: "password must match with confirm password",
     path: ["confirmPassword"],
   })
-  .transform(async (data) => {
-    // console.log("in tranform : ", data);
-    const output = {
-      [identityKey(data.identity)]: data.identity,
-      password: await bcrypt.hash(data.password, 8),
-      firstName: data.firstName,
-      lastName: data.lastName,
-    };
-    return output;
-  });
+  .transform(async (data) => ({
+    [identityKey(data.identity)]: data.identity,
+    password: await bcrypt.hash(data.password, 8),
+    firstName: data.firstName,
+    lastName: data.lastName,
+  }));
+
+export const loginSchema = z
+  .object({
+    identity: z
+      .string()
+      .min(2, "Email or phone-number require")
+      .refine((value) => emailRegex.test(value) || mobileRegex.test(value), {
+        message: "identity must be a valid email or mobile number",
+      }),
+    password: z.string().min(4, "password at least 4 characters"),
+  })
+  .transform((data) => ({
+    [identityKey(data.identity)]: data.identity,
+    password: data.password,
+  }));
