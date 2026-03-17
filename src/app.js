@@ -7,7 +7,7 @@ import cors from "cors";
 const app = express();
 app.use(
   cors({
-    origin: ["http://localhost:5174"], // allowed origins
+    origin: ["http://localhost:5173"], // allowed origins
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true, // allow cookies if needed
   })
